@@ -1,0 +1,16 @@
+<!-- <input type="text" id="country-search" [(ngModel)]="country" placeholder="start typing to filter through countries"> -->
+<h2>COUNTRIES LIST USING MOCK</h2>
+<ul class="countries">
+  <li *ngFor="let country of countries">
+    <!-- <button type="button" (click)="onSelect(country)" >
+      <span class ="country_id">{{country.id}} </span>
+      <span class ="country.name">{{country.name}}</span>
+    </button> -->
+    <a routerLink="/details/{{country.id}}">
+      <span class="badge">{{country.id}}</span> {{country.name}}
+    </a>
+  </li>
+
+</ul>
+
+<!-- <app-country-detail [country] = "selectedCountry"></app-country-detail> -->
